@@ -11,6 +11,7 @@ echo [1] CYP Custom Server (Beinhaltet auch die Default Server)
 echo [2] Default Among Us Server
 echo [3] Exit
 echo.
+set /a choice=0
 set /p choice=Nummer: 
 if %choice%==1 goto :setcustom
 if %choice%==2 goto :setdefault
