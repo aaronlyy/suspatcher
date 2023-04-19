@@ -1,13 +1,13 @@
 @echo off
 
 set /a choice=0
-color 0d
+color 09
 title SUSPATCHER
 
 :start
 call :logo
-echo Welcher Server soll aktiviert werden?
-echo [1] CYP Custom Server
+echo Welche Config soll aktiv sein?
+echo [1] CYP Custom Server (Beinhaltet auch die Default Server)
 echo [2] Default Among Us Server
 echo [3] Exit
 echo.
