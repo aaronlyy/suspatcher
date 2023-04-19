@@ -32,16 +32,19 @@ call :logo
 call :checkfolder
 echo Custom Server File schreiben...
 echo {"CurrentRegionIdx":3,"Regions":[{"$type":"StaticHttpRegionInfo, Assembly-CSharp","Name":"North America","PingServer":"matchmaker.among.us","Servers":[{"Name":"Http-1","Ip":"https://matchmaker.among.us","Port":443,"UseDtls":true,"Players":0,"ConnectionFailures":0}],"TranslateName":289},{"$type":"StaticHttpRegionInfo, Assembly-CSharp","Name":"Europe","PingServer":"matchmaker-eu.among.us","Servers":[{"Name":"Http-1","Ip":"https://matchmaker-eu.among.us","Port":443,"UseDtls":true,"Players":0,"ConnectionFailures":0}],"TranslateName":290},{"$type":"StaticHttpRegionInfo, Assembly-CSharp","Name":"Asia","PingServer":"matchmaker-as.among.us","Servers":[{"Name":"Http-1","Ip":"https://matchmaker-as.among.us","Port":443,"UseDtls":true,"Players":0,"ConnectionFailures":0}],"TranslateName":291},{"$type":"StaticHttpRegionInfo, Assembly-CSharp","Name":"chooseyourpath","PingServer":"among-us.buettner.tech","Servers":[{"Name":"http-1","Ip":"http://among-us.buettner.tech","Port":80,"UseDtls":false,"Players":0,"ConnectionFailures":0}],"TranslateName":1003}]} > "%USERPROFILE%\AppData\LocalLow\Innersloth\Among Us\regionInfo.json"
-pause
-goto start
+goto :end
 
 :setdefault
 call :logo
 call :checkfolder
 echo Default Server File schreiben...
 echo {"CurrentRegionIdx":1,"Regions":[{"$type":"StaticHttpRegionInfo, Assembly-CSharp","Name":"North America","PingServer":"matchmaker.among.us","Servers":[{"Name":"Http-1","Ip":"https://matchmaker.among.us","Port":443,"UseDtls":true,"Players":0,"ConnectionFailures":0}],"TranslateName":289},{"$type":"StaticHttpRegionInfo, Assembly-CSharp","Name":"Europe","PingServer":"matchmaker-eu.among.us","Servers":[{"Name":"Http-1","Ip":"https://matchmaker-eu.among.us","Port":443,"UseDtls":true,"Players":0,"ConnectionFailures":0}],"TranslateName":290},{"$type":"StaticHttpRegionInfo, Assembly-CSharp","Name":"Asia","PingServer":"matchmaker-as.among.us","Servers":[{"Name":"Http-1","Ip":"https://matchmaker-as.among.us","Port":443,"UseDtls":true,"Players":0,"ConnectionFailures":0}],"TranslateName":291}]} > "%USERPROFILE%\AppData\LocalLow\Innersloth\Among Us\regionInfo.json"
+goto :end
+
+:end
+echo Fertig!
 pause
-goto start
+exit
 
 :error
 color 0c
